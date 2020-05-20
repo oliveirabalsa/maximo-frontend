@@ -47,21 +47,6 @@ export default function Signin() {
     }
   }
 
-  function ocultPassword() {
-    setType('password');
-    setEye('block');
-    setEyeOff('none');
-  }
-
-  function showPassword() {
-    setType('text');
-    setEye('none');
-    setEyeOff('block');
-    if (type === 'text') {
-      ocultPassword();
-    }
-  }
-
   return (
     <div>
       <div className='back' />
@@ -84,21 +69,6 @@ export default function Signin() {
               onChange={(e) => setSenha(e.target.value)}
               required
             />
-            <FiEye
-              display={eye}
-              onClick={showPassword}
-              className='eye'
-              size={25}
-              color='black'
-            />
-            <FiEyeOff
-              display={eyeOff}
-              onClick={showPassword}
-              className='eye'
-              size={25}
-              color='black'
-            />
-
             <button className='button' type='submit'>
               Entrar
             </button>

@@ -49,20 +49,7 @@ export default function Signup() {
   function Alert(props) {
     return <MuiAlert elevation={6} variant='filled' {...props} />;
   }
-  function ocultPassword() {
-    setType('password');
-    setEye('block');
-    setEyeOff('none');
-  }
-
-  function showPassword() {
-    setType('text');
-    setEye('none');
-    setEyeOff('block');
-    if (type === 'text') {
-      ocultPassword();
-    }
-  }
+ 
 
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -117,22 +104,7 @@ export default function Signup() {
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
             />
-            <FiEye
-              display={eye}
-              onClick={showPassword}
-              className='eye'
-              size={25}
-              color='black'
-            />
-            <FiEyeOff
-              display={eyeOff}
-              onClick={showPassword}
-              className='eye'
-              size={25}
-              color='black'
-            />
-
-            <button className='button' type='submit'>
+             <button className='button' type='submit'>
               Enviar
             </button>
             <div className={classes.root}>
