@@ -9,8 +9,8 @@ export const Container = styled.section`
     align-items: center;
     justify-content: center;
     padding: 10px;
-    height: 430px;
-    margin: 10% auto;
+    height: 452px;
+    margin: 7% auto;
     border: 1px solid #4f4f4f;
     background-color: rgba(120, 120, 150, 0.5);
     box-shadow: 0px 0px 5px black;
@@ -26,8 +26,8 @@ export const Container = styled.section`
       margin-bottom: 30px;
     }
     .MuiFormControl-root {
-      border: 0;
-      margin: 0;
+      border: 10;
+      margin: 5px;
       display: inline-flex;
       padding: 0;
       position: relative;
@@ -62,11 +62,15 @@ export const Container = styled.section`
     .eye:hover {
       opacity: 0.5;
     }
-    button {
-      width: 80%;
+    .button {
+      width: 70%;
       max-width: 350px;
       margin-top: 20px;
+      -webkit-transition: 0.2s;
       transition: 0.2s;
+      color: #000000;
+      background: #808080	
+
     }
     h3 {
         margin-top: 5px;
@@ -77,7 +81,6 @@ export const Container = styled.section`
     }
 
     }
-
     button:hover {
       filter: brightness(90%);
     }

@@ -35,7 +35,7 @@ export default function Signup() {
       setTimeout(() => {
         history.push('/');
       }, 3000);
-      
+
       setMessage('Cadastrado com sucesso');
       setStatus('success');
       handleClick();
@@ -49,7 +49,7 @@ export default function Signup() {
   function Alert(props) {
     return <MuiAlert elevation={6} variant='filled' {...props} />;
   }
- 
+
 
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -83,28 +83,37 @@ export default function Signup() {
             <img src={logo} alt='logotipo' />
             <h1>Faça seu cadastro</h1>
             <TextField
+              variant="outlined"
+              margin="normal"
               label='Nome'
               placeholder='Digite seu nome'
               value={name}
               onChange={(e) => setName(e.target.value)}
+              autoFocus
               required
             />
             <TextField
+              variant="outlined"
+              margin="normal"
               label='E-mail'
               required
               placeholder='Digite seu e-mail'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              autoFocus
             />
             <TextField
+              variant="outlined"
+              margin="normal"
               label='Senha'
               type={type}
               required
               placeholder='Digite sua senha'
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
+              autoFocus
             />
-             <button className='button' type='submit'>
+            <button className='button' type='submit'>
               Enviar
             </button>
             <div className={classes.root}>

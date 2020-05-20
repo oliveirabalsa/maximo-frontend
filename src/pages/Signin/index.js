@@ -56,14 +56,20 @@ export default function Signin() {
             <img src={logo} alt='logotipo' />
             <h1>Faça seu login</h1>
             <TextField
+              variant="outlined"
+              margin="normal"
               label='E-mail'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              autoFocus
               required
             />
             <TextField
               label='Senha'
               className='password'
+              autoFocus
+              variant="outlined"
+              margin="normal"
               type={type}
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
